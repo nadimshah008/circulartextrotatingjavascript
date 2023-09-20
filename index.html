@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Text</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <p id="text"></p>
+    <script>
+        const str = "NSCODE YT CHANNEL SUBSCRIBE NOW";
+        const text = document.getElementById("text");
+        window.onload = function(){
+            for (let i = 0; i < str.length; i++) {
+                let span = document.createElement('span');
+                span.innerHTML = str[i] 
+                text.appendChild(span);
+                console.log(str[i])
+                span.style.transform = `rotate(${11*i}deg)`;
+            }
+        }
+    </script>
+</body>
+</html>
